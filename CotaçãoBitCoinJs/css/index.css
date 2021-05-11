@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    font-family: 'Consolas';
+    background-color: #FF0000;
+}
+
+#valor {
+    text-align: center;
+    background-color: red;
+    color:white;
+    font-size: 32px;
+    font-family: 'Consolas';
+}
+
+#lbvalor {
+    font-size: 22px;
+    font-family: 'Consolas';
+    color: white;
+}
+
+#th1 {
+    color: white;
+}
