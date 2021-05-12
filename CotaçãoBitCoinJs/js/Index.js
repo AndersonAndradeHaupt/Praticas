@@ -1,5 +1,5 @@
 $.support.cors = true;
-
+var vlr1 ;
 $(document).ready(
     function(){
         ConsultaValor();
@@ -16,16 +16,16 @@ function ConsultaValor(){
         url:'https://www.mercadobitcoin.net/api/BTC/ticker/',
         datatype : 'json',
         success: function(data){
-         var  vlr = data.ticker.last;
-
-         if (document.getElementById('valor').value > vlr) {
+         var  vlr = parseFloat(data.ticker.last); 
+ 
+         if (vlr1 < vlr) {
             document.getElementById('valor').style.backgroundColor = '#006400';
 
          } else {
             document.getElementById('valor').style.backgroundColor = '#FF0000'; 
          } 
         document.getElementById('valor').value = (parseFloat(vlr)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-
+        vlr1 = vlr;
              
         },
         error: function(data){
