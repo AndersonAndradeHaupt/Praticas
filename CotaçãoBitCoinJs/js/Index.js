@@ -24,7 +24,7 @@ function ConsultaValor(){
          } else {
             document.getElementById('valor').style.backgroundColor = '#FF0000'; 
          } 
-        document.getElementById('valor').value = vlr;
+        document.getElementById('valor').value = (parseFloat(vlr)).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
 
              
         },
